@@ -1,5 +1,16 @@
 {
     "name": "Nate Moore",
+    "companies": [
+        {
+            "company": "Intraprise Solutions",
+            "role": "UI/UX Engineer",
+            "time": "2016 - Present"
+        }
+    ],
+    "skills": {
+        "design": [],
+        "development": []
+    },
     "links": {
         "website": {
             "text": "https://natemoo.re",

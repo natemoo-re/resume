@@ -16,7 +16,7 @@ export function linksToChoices(links: { [key: string]: Link }) {
 }
 
 export function emojify(str: string, emoji: string): string {
-    return str + onlyUnix(` ${emoji}`);
+    return onlyUnix(`${emoji}  `) + str;
 }
 
 export function isWin() {

@@ -15,8 +15,9 @@ async function run() {
         name: 'selected',
         message: `Explore`,
         choices: [
+            { title: emojify('About', 'ℹ️'), value: 'about' },
             { title: emojify('Links', '🌐'), value: 'links' },
-            { title: emojify('Open Source', '📒'), value: 'oss' },
+            { title: emojify('Open Source', '📘'), value: 'oss' },
             { title: emojify('Projects', '💎'), value: 'projects' }
         ]
     }    
@@ -24,6 +25,9 @@ async function run() {
 
     let result: null | { url: string } = null;
     switch (selected) {
+        case 'about':
+            console.log('Coming soon');
+            break;
         case 'links':
             const links = {
                 type: 'select',
