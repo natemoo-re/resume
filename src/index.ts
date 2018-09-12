@@ -1,6 +1,6 @@
 import { prompt } from './vendor/prompts';
-import { dim, bold } from 'turbocolor';
-import { readAbout } from './utils';
+import { bold } from 'turbocolor';
+import { readAbout, linksToChoices } from './utils';
 import open from 'opn';
 
 
@@ -19,7 +19,6 @@ async function run() {
             { title: `projects`, value: 'projects' }
         ]
     }
-
     const { selected } = await prompt(menu);
 
     switch (selected) {
@@ -28,10 +27,12 @@ async function run() {
                 type: 'select',
                 name: 'url',
                 message: 'Open URL',
-                choices: Object.entries(about.links).map(([platform, data]) => ({ title: `${platform} ${dim(data.text)}`, value: data.url }))
+                choices: linksToChoices(about.links)
             }
             const { url } = await prompt(links);
-            return open(url);
+            open(url);
+            process.exit();
+            break;
         case 'projects':
             console.log('Coming soon...');
             break;
