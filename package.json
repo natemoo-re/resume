@@ -1,0 +1,56 @@
+{
+    "name": "@natemoore/resume",
+    "version": "0.1.0",
+    "description": "Nate Moore's Resume CLI",
+    "main": "dist/index.js",
+    "bin": {
+        "natemoore": "dist/index.js"
+    },
+    "scripts": {
+        "start": "node dist/index.js",
+        "copy": "cp src/me.json dist/me.json",
+        "build.tsc": "tsc -p .",
+        "build.bundle": "rollup -c",
+        "minify": "uglifyjs --compress --mangle --toplevel --output dist/index.js -- dist/index.js",
+        "build": "npm run build.tsc && npm run build.bundle && npm run copy",
+        "build.dev": "npm run build",
+        "dev": "npm run build.dev && npm start",
+        "version": "npm build",
+        "release": "np"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/natemoo-re/resume.git"
+    },
+    "keywords": [
+        "resume",
+        "nate moore",
+        "nathan moore",
+        "nmoore"
+    ],
+    "author": "Nate Moore",
+    "contributors": [
+        {
+            "name": "Nate Moore",
+            "email": "nate@natemoo.re",
+            "url": "https://projects.natemoo.re"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/natemoo-re/resume/issues"
+    },
+    "homepage": "https://github.com/natemoo-re/resume#readme",
+    "devDependencies": {
+        "@types/node": "^10.9.4",
+        "rollup": "^0.65.2",
+        "rollup-plugin-commonjs": "^9.1.6",
+        "rollup-plugin-json": "^3.0.0",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "sisteransi": "^1.0.0",
+        "turbocolor": "^2.6.1",
+        "typescript": "^3.0.3",
+        "uglify-es": "^3.3.9"
+    },
+    "dependencies": {}
+}
