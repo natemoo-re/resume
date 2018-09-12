@@ -14,3 +14,14 @@ export function readAbout(): Promise<About> {
 export function linksToChoices(links: { [key: string]: Link }) {
     return Object.entries(links).map(([name, data]) => ({ title: `${name} ${dim(data.text)}`, value: data.url }));
 }
+
+export function emojify(str: string, emoji: string): string {
+    return str + onlyUnix(` ${emoji}`);
+}
+
+export function isWin() {
+    return process.platform === 'win32';
+}
+export function onlyUnix(str: string) {
+    return !isWin() ? str : '';
+}

@@ -1,6 +1,6 @@
 import { prompt } from './vendor/prompts';
 import { bold } from 'turbocolor';
-import { readAbout, linksToChoices } from './utils';
+import { readAbout, linksToChoices, emojify } from './utils';
 import open from 'opn';
 
 
@@ -15,12 +15,13 @@ async function run() {
         name: 'selected',
         message: `Explore`,
         choices: [
-            { title: `links`, value: 'links' },
-            { title: `projects`, value: 'projects' }
+            { title: emojify('Links', '🌐'), value: 'links' },
+            { title: emojify('Open Source', '🛠'), value: 'oss' }
         ]
-    }
+    }    
     const { selected } = await prompt(menu);
 
+    let result: null | { url: string } = null;
     switch (selected) {
         case 'links':
             const links = {
@@ -29,13 +30,22 @@ async function run() {
                 message: 'Open URL',
                 choices: linksToChoices(about.links)
             }
-            const { url } = await prompt(links);
-            open(url);
-            process.exit();
+            result = await prompt(links);
             break;
-        case 'projects':
-            console.log('Coming soon...');
+        case 'oss':
+            const oss = {
+                type: 'select',
+                name: 'url',
+                message: 'View Project',
+                choices: linksToChoices(about.oss)
+            }
+            result = await prompt(oss);
             break;
+    }
+
+    if (result && result.url) {
+        open(result.url);
+        setTimeout(() => process.exit(), 500);
     }
     
     return;

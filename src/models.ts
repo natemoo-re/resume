@@ -4,10 +4,8 @@ export interface Link {
 }
 
 export interface About {
-    name: string,
-    links: {
-        twitter: Link;
-        github: Link;
-        npm: Link;
-    }
+    name: string;
+    links: { [key: string]: Link };
+    oss: { [key: string]: Link };
+    projects: { [key: string]: Link };
 }

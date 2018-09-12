@@ -17,5 +17,22 @@
             "text": "@n_moore",
             "url": "https://twitter.com/n_moore"
         }
+    },
+    "oss": {
+        "Stencil Tools": {
+            "text": "VS Code extension for StencilJS projects (500+ installs)",
+            "url": "https://marketplace.visualstudio.com/items?itemName=natemoo-re.vscode-stencil-tools"
+        },
+        "tslint-stencil": {
+            "text": "Custom TSLint rules for StencilJS projects",
+            "url": "https://www.npmjs.com/package/tslint-stencil"
+        },
+        "ts-plugin": {
+            "text": "CLI for managing TypeScript Server plugins",
+            "url": "https://www.npmjs.com/package/ts-plugin"
+        }
+    },
+    "projects": {
+        
     }
 }
