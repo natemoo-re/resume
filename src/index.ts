@@ -8,7 +8,7 @@ async function run() {
     const about = await readAbout();
 
     console.log();
-    console.log(bold(`${about.name}'s digital card\n`));
+    console.log(bold(`${about.name}\n`));
 
     const menu = {
         type: 'select',
