@@ -15,7 +15,7 @@ export default {
             // left-hand side can be an absolute path, a path
             // relative to the current directory, or the name
             // of a module in node_modules
-            'node_modules/turbocolor/index.js': ['dim']
+            'node_modules/turbocolor/index.js': ['dim', 'bold']
         }
     })],
     external: [
