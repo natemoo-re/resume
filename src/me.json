@@ -33,6 +33,17 @@
         }
     },
     "projects": {
-        
+        "Code Rabbit": {
+            "text": "Educational YouTube videos about development",
+            "url": "https://www.youtube.com/channel/UC4htGd72oLFjRGwYdS1NMaA"
+        },
+        "Smore": {
+            "text": "Various useful web components",
+            "url": "https://www.npmjs.com/org/smore"
+        },
+        "Nomadx": {
+            "text": "Web components built for accessibility",
+            "url": "https://www.npmjs.com/org/nomadx"
+        }
     }
 }
