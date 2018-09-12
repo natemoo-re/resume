@@ -1,8 +1,13 @@
+interface Link {
+    text: string;
+    url: string;
+}
+
 export interface About {
     name: string,
     links: {
-        twitter: string,
-        github: string,
-        npm: string
+        twitter: Link;
+        github: Link;
+        npm: Link;
     }
 }

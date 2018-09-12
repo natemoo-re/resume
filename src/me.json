@@ -1,8 +1,21 @@
 {
     "name": "Nate Moore",
     "links": {
-        "twitter": "https://twitter.com/n_moore",
-        "github": "http://github.com/natemoo-re",
-        "npm": "https://www.npmjs.com/~natemoo-re"
+        "website": {
+            "text": "https://natemoo.re",
+            "url": "https://natemoo.re"
+        },
+        "github": {
+            "text": "@natemoo-re",
+            "url": "https://github.com/natemoo-re"
+        },
+        "npm": {
+            "text": "@natemoo-re",
+            "url": "https://www.npmjs.com/~natemoo-re"
+        },
+        "twitter": {
+            "text": "@n_moore",
+            "url": "https://twitter.com/n_moore"
+        }
     }
 }
