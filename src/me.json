@@ -1,10 +1,18 @@
 {
     "name": "Nate Moore",
+    "status": "for hire",
+    "about": "Nate Moore is a designer, developer, and open-source software enthusiast based in Chicago, IL.",
+    "email": "nate@natemoo.re",
     "companies": [
         {
             "company": "Intraprise Solutions",
             "role": "UI/UX Engineer",
             "time": "2016 - Present"
+        },
+        {
+            "company": "Knox College",
+            "role": "Graphic Designer",
+            "time": "2014 - 2016"
         }
     ],
     "skills": {
@@ -12,19 +20,19 @@
         "development": []
     },
     "links": {
-        "website": {
+        "Website": {
             "text": "https://natemoo.re",
             "url": "https://natemoo.re"
         },
-        "github": {
+        "Github": {
             "text": "@natemoo-re",
             "url": "https://github.com/natemoo-re"
         },
-        "npm": {
+        "NPM": {
             "text": "@natemoo-re",
             "url": "https://www.npmjs.com/~natemoo-re"
         },
-        "twitter": {
+        "Twitter": {
             "text": "@n_moore",
             "url": "https://twitter.com/n_moore"
         }
@@ -48,7 +56,7 @@
             "text": "Educational YouTube videos about development",
             "url": "https://www.youtube.com/channel/UC4htGd72oLFjRGwYdS1NMaA"
         },
-        "Smore": {
+        "S'more": {
             "text": "Various useful web components",
             "url": "https://www.npmjs.com/org/smore"
         },

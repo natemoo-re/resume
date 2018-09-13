@@ -48,3 +48,19 @@ export function confirm(args) {
 export function select(args) {
   return toPrompt('SelectPrompt', args);
 }
+
+/**
+ * Toggle/switch prompt
+ * @param {string} args.message Prompt message to display
+ * @param {boolean} [args.initial=false] Default value
+ * @param {string} [args.active="on"] Text for `active` state
+ * @param {string} [args.inactive="off"] Text for `inactive` state
+ * @param {function} [args.onState] On state change callback
+ * @param {Stream} [opts.stdin] The Readable stream to listen to
+ * @param {Stream} [opts.stdout] The Writable stream to write readline data to
+ * @returns {Promise} Promise with user input
+ */
+export function toggle(args) {
+  return toPrompt('TogglePrompt', args);
+}
+

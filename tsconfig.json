@@ -2,7 +2,8 @@
     "compilerOptions": {
         "lib": [
             "es2015",
-            "es2017.object"
+            "es2017.object",
+            "es2017.string"
         ],
         "moduleResolution": "node",
         "target": "es2015",

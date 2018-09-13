@@ -11,6 +11,9 @@ export interface Link {
 
 export interface About {
     name: string;
+    status: string;
+    about: string;
+    email: string;
     companies: Company[];
     skills: {
         design: string[],
