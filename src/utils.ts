@@ -7,6 +7,7 @@ const readFile = promisify(_readFile);
 import { About } from './models';
 
 export function readAbout(): Promise<About> {
+    console.log(cwd());
     return readFile(resolve(cwd(), 'me.json'))
         .then(buffer => JSON.parse(buffer.toString()));
 }
