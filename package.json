@@ -3,9 +3,9 @@
     "version": "0.2.0",
     "description": "Nate Moore's Resume CLI",
     "main": "dist/index.js",
-    "bin": {
-        "natemoore": "dist/index.js"
-    },
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "start": "node dist/index.js",
         "copy": "cp src/me.json dist/me.json",
@@ -44,6 +44,7 @@
     "devDependencies": {
         "@types/node": "^10.9.4",
         "@types/opn": "^5.1.0",
+        "np": "^3.0.4",
         "opn": "^5.3.0",
         "prompts": "^1.1.0",
         "rollup": "^0.65.2",

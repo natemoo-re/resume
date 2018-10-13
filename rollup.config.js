@@ -29,6 +29,7 @@ export default {
         'events',
         'stream',
         'util',
-        'buffer'
+        'buffer',
+        'np'
     ]
 };

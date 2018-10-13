@@ -1,29 +1,34 @@
 {
     "name": "Nate Moore",
     "status": "for hire",
-    "about": "Nate Moore is a designer, developer, and open-source software enthusiast based in Chicago, IL.",
+    "about": "Nate Moore is a designer, web developer, and open-source software enthusiast based in Chicago, IL.",
     "email": "nate@natemoo.re",
     "companies": [
         {
             "company": "Intraprise Solutions",
             "role": "UI/UX Engineer",
             "time": "2016 - Present"
-        },
-        {
-            "company": "Knox College",
-            "role": "Graphic Designer",
-            "time": "2014 - 2016"
         }
     ],
     "skills": {
-        "design": [],
-        "development": []
+        "design": [
+            "User Interfaces",
+            "Microinteractions",
+            "Animation",
+            "Design Systems",
+            "Ideation",
+            "Branding",
+            "Prototyping"
+        ],
+        "development": [
+            "Web (JS, HTML, CSS)",
+            "Typescript",
+            "Node",
+            "Bash",
+            "PHP"
+        ]
     },
     "links": {
-        "Website": {
-            "text": "https://natemoo.re",
-            "url": "https://natemoo.re"
-        },
         "Github": {
             "text": "@natemoo-re",
             "url": "https://github.com/natemoo-re"
@@ -39,12 +44,20 @@
     },
     "oss": {
         "Stencil Tools": {
-            "text": "VS Code extension for StencilJS projects (500+ installs)",
+            "text": "VS Code extension for StencilJS projects (600+ installs)",
             "url": "https://marketplace.visualstudio.com/items?itemName=natemoo-re.vscode-stencil-tools"
         },
         "tslint-stencil": {
             "text": "Custom TSLint rules for StencilJS projects",
             "url": "https://www.npmjs.com/package/tslint-stencil"
+        },
+        "typescript-plugin-stencil": {
+            "text": "Typescript Server plugin for a smoother DX in StencilJS projects",
+            "url": "https://www.npmjs.com/package/typescript-plugin-stencil"
+        },
+        "konami-listener": {
+            "text": "Listen for the Konami Code with this vanilla Web Component",
+            "url": "https://www.npmjs.com/package/konami-listener"
         },
         "ts-plugin": {
             "text": "CLI for managing TypeScript Server plugins",
@@ -52,17 +65,17 @@
         }
     },
     "projects": {
-        "Code Rabbit": {
-            "text": "Educational YouTube videos about development",
-            "url": "https://www.youtube.com/channel/UC4htGd72oLFjRGwYdS1NMaA"
-        },
         "S'more": {
-            "text": "Various useful web components",
-            "url": "https://www.npmjs.com/org/smore"
+            "text": "Web Component library of microinteractions and UX utilities",
+            "url": "https://smore.tools/"
         },
-        "Nomadx": {
-            "text": "Web components built for accessibility",
-            "url": "https://www.npmjs.com/org/nomadx"
+        "Emojex": {
+            "text": "Emoji-based Regular Expressions (I'm sorry)",
+            "url": "https://github.com/natemoo-re/emojex"
+        },
+        "Ibex": {
+            "text": "Experimental template-driven CMS built with Web Components",
+            "url": "https://ibex.tools/"
         }
     }
 }

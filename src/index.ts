@@ -1,5 +1,6 @@
+import { spawn } from 'child_process';
 import { prompt } from './vendor/prompts';
-import { green, dim, italic, reset } from 'turbocolor';
+import { green, bold, dim, italic, reset } from 'turbocolor';
 import { readAbout, onlyUnix } from './utils';
 import { h, linksToChoices, companyToLine, emojify } from './format';
 import open from 'opn';
@@ -63,6 +64,13 @@ async function main() {
                 title: 'Career',
                 content: [...about.companies].map((c, i) => companyToLine(c, i === 0))
             });
+            sections.push({
+                title: 'Skills',
+                content: [
+                    `${bold(green('Design'))}  ` + [...about.skills.design].join(dim(' | ')),
+                    `${bold(green('Development'))}  ` + [...about.skills.development].join(dim(' | '))
+                ].join('\n  ')
+            })
 
             sections.forEach(({ title, content }, i) => {
                 console.log(h(title));
@@ -73,7 +81,7 @@ async function main() {
                     console.log('  ' + content);
                 }
                 if (i !== sections.length - 1) { console.log(); }
-            })
+            });
 
             break;
         case 'links':
