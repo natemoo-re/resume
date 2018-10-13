@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { resolve } from 'path';
 import { promisify } from 'util';
 import { readFile as _readFile } from 'fs';
 const readFile = promisify(_readFile);
@@ -6,7 +6,7 @@ const readFile = promisify(_readFile);
 import { About } from './models';
 
 export function readAbout(): Promise<About> {
-    return readFile('me.json')
+    return readFile(resolve(__dirname, 'me.json'))
         .then(buffer => JSON.parse(buffer.toString()));
 }
 
