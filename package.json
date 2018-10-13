@@ -11,11 +11,10 @@
     ],
     "scripts": {
         "start": "node dist/index.js",
-        "copy": "cp src/me.json dist/me.json",
         "build.tsc": "tsc -p .",
         "build.bundle": "rollup -c",
         "minify": "uglifyjs --compress --mangle --toplevel --output dist/index.js -- dist/index.js",
-        "build": "npm run build.tsc && npm run build.bundle && npm run copy",
+        "build": "npm run build.tsc && npm run build.bundle",
         "build.dev": "npm run build",
         "dev": "npm run build.dev && npm start",
         "version": "npm build",
