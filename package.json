@@ -1,6 +1,6 @@
 {
     "name": "@natemoore/resume",
-    "version": "0.3.5",
+    "version": "0.3.6-0",
     "description": "Nate Moore's Resume CLI",
     "main": "dist/index.js",
     "bin": {
