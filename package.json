@@ -3,6 +3,9 @@
     "version": "0.3.0",
     "description": "Nate Moore's Resume CLI",
     "main": "dist/index.js",
+    "bin": {
+        "natemoore": "dist/index.js"
+    },
     "files": [
         "dist"
     ],
