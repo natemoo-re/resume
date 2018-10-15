@@ -1,8 +1,7 @@
-import { spawn } from 'child_process';
 import { prompt } from './vendor/prompts';
-import { green, bold, dim, italic, reset } from 'turbocolor';
+import { green, dim, italic, reset } from 'turbocolor';
 import { readAbout, onlyUnix } from './utils';
-import { h, linksToChoices, companyToLine, emojify } from './format';
+import { h, linksToChoices, companyToLine, emojify, skillList } from './format';
 import open from 'opn';
 
 const onCancel = () => {
@@ -28,8 +27,8 @@ async function back() {
 }
 
 async function main() {
-    console.clear();
     const about = await readAbout();
+    console.clear();
 
     console.log();
     console.log(`${h(about.name)} is ${green(about.status)}`);
@@ -58,19 +57,24 @@ async function main() {
 
             sections.push({
                 title: 'About',
-                content: about.about
+                content: about.about.replace(/\n/g, '\n  ')
             });
             sections.push({
                 title: 'Career',
                 content: [...about.companies].map((c, i) => companyToLine(c, i === 0))
             });
             sections.push({
-                title: 'Skills',
-                content: [
-                    `${bold(green('Design'))}  ` + [...about.skills.design].join(dim(' | ')),
-                    `${bold(green('Development'))}  ` + [...about.skills.development].join(dim(' | '))
-                ].join('\n  ')
-            })
+                title: 'Development Skills',
+                content: skillList(about.skills.development)
+            });
+            sections.push({
+                title: 'Design Skills',
+                content: skillList(about.skills.design)
+            });
+            sections.push({
+                title: 'Personal Skills',
+                content: about.skills.personal.map((item) => `- ${item}`).join('\n  ')
+            });
 
             sections.forEach(({ title, content }, i) => {
                 console.log(h(title));
@@ -114,16 +118,24 @@ async function main() {
     }
 
     if (result && result.url) {
-        open(result.url, { wait: false });
-        return Promise.resolve();
+        if (result.url === 'back') {
+            return Promise.resolve(true);
+        } else {
+            open(result.url, { wait: false });
+            return Promise.resolve();
+        }
     }
     
     return Promise.resolve();
 };
 
 async function run() {
-    await main();
-    await back();
+    const skipBack = await main();
+    if (skipBack) {
+        run();
+    } else {
+        await back();
+    }
 }
 
 run();

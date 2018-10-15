@@ -1,31 +1,67 @@
 {
     "name": "Nate Moore",
     "status": "for hire",
-    "about": "Nate Moore is a designer, web developer, and open-source software enthusiast based in Chicago, IL.",
+    "about": "I am a developer and designer with a passion for DX and UI/UX work. I excel at leveraging my\ntechnical, visual, and writing expertise to create approachable experiences.",
     "email": "nate@natemoo.re",
     "companies": [
         {
             "company": "Intraprise Solutions",
             "role": "UI/UX Engineer",
-            "time": "2016 - Present"
+            "time": "1/2017 - Present",
+            "description": "Lead UI designer and contributing engineer on two hybrid, patient-facing healthcare applications;\noversaw adoption of Angular & Ionic.\n\nCreated brand and design system for client business; lead designer and engineer of company website\nwith Stencil-built web components on a Wordpress backend."
+        },
+        {
+            "company": "Freelance",
+            "role": "Design/Development Consultant",
+            "time": "5/2015 - 1/2017",
+            "description": "Worked with numerous small businesses; provided consultation and/or implementation of branding,\nweb development, illustration, and print design."
         }
     ],
+    "education": [
+        { "name": "Knox College", "time": "8/2012 - 6/2016" }
+    ],
     "skills": {
-        "design": [
-            "User Interfaces",
-            "Microinteractions",
-            "Animation",
-            "Design Systems",
-            "Ideation",
-            "Branding",
-            "Prototyping"
-        ],
-        "development": [
-            "Web (JS, HTML, CSS)",
-            "Typescript",
-            "Node",
-            "Bash",
-            "PHP"
+        "design": {
+            "Web Sites and Apps": [
+                "JS",
+                "Typescript",
+                "HTML",
+                "CSS",
+                "Web Components",
+                "PWAs",
+                "Hybrid Apps"
+            ],
+            "Open Source Software": [
+                "Technical Documentation",
+                "Issue Tracking"
+            ],
+            "Additional Skills": [
+                "Git, Bash, PHP"
+            ]
+        },
+        "development": {
+            "UI/UX Design": [
+                "Design Systems",
+                "Animation",
+                "Prototyping",
+                "Microinteractions",
+                "Copywriting"
+            ],
+            "Branding": [
+                "Ideation",
+                "Developing Guidelines",
+                "Copywriting",
+                "Logos",
+                "Typography"
+            ],
+            "Tools": [
+                "Sketch, Adobe Suite"
+            ]
+        },
+        "personal": [
+            "Adept at improving user and developer experiences",
+            "Strong, concise writer",
+            "Skilled user of design and language to distill complex concepts"
         ]
     },
     "links": {
@@ -44,38 +80,34 @@
     },
     "oss": {
         "Stencil Tools": {
-            "text": "VS Code extension for StencilJS projects (600+ installs)",
+            "text": "Open-source editor extension that streamlines Developer Experience with Stencil.",
             "url": "https://marketplace.visualstudio.com/items?itemName=natemoo-re.vscode-stencil-tools"
         },
         "tslint-stencil": {
-            "text": "Custom TSLint rules for StencilJS projects",
+            "text": "Custom TSLint rules in Stencil projects.",
             "url": "https://www.npmjs.com/package/tslint-stencil"
         },
         "typescript-plugin-stencil": {
-            "text": "Typescript Server plugin for a smoother DX in StencilJS projects",
+            "text": "Typescript Server plugin that improves Intellisense in Stencil projects.",
             "url": "https://www.npmjs.com/package/typescript-plugin-stencil"
         },
         "konami-listener": {
-            "text": "Listen for the Konami Code with this vanilla Web Component",
+            "text": "Vanilla Web Component that adds a Konami Code easter egg to any web app.",
             "url": "https://www.npmjs.com/package/konami-listener"
         },
         "ts-plugin": {
-            "text": "CLI for managing TypeScript Server plugins",
+            "text": "Command Line tool for managing Typescript Server plugins.",
             "url": "https://www.npmjs.com/package/ts-plugin"
         }
     },
     "projects": {
-        "S'more": {
-            "text": "Web Component library of microinteractions and UX utilities",
-            "url": "https://smore.tools/"
-        },
         "Emojex": {
             "text": "Emoji-based Regular Expressions (I'm sorry)",
             "url": "https://github.com/natemoo-re/emojex"
         },
-        "Ibex": {
-            "text": "Experimental template-driven CMS built with Web Components",
-            "url": "https://ibex.tools/"
+        "S'more": {
+            "text": "Web Component library with microinteractions and UX utilities",
+            "url": "https://smore.tools/"
         }
     }
 }

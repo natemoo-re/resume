@@ -2,6 +2,11 @@ export interface Company {
     company: string;
     role: string;
     time: string;
+    description: string;
+}
+export interface Education {
+    name: string;
+    time: string;
 }
 
 export interface Link {
@@ -15,9 +20,11 @@ export interface About {
     about: string;
     email: string;
     companies: Company[];
+    education: Education[];
     skills: {
-        design: string[],
-        development: string[]
+        design: { [key: string]: string[] },
+        development: { [key: string]: string[] },
+        personal: string[]
     };
     links: { [key: string]: Link };
     oss: { [key: string]: Link };
