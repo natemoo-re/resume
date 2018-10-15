@@ -1,7 +1,7 @@
 import { prompt } from './vendor/prompts';
-import { green, dim, italic, reset } from 'turbocolor';
-import { readAbout, onlyUnix } from './utils';
-import { h, linksToChoices, companyToLine, emojify, skillList } from './format';
+import { green, dim, italic, reset, red } from 'turbocolor';
+import { readAbout, onlyUnix, mainHint, linkHint } from './utils';
+import { h, linksToChoices, companyToLine, emojify, skillList, signature, hr } from './format';
 import open from 'opn';
 
 const onCancel = () => {
@@ -43,7 +43,8 @@ async function main() {
             { title: emojify('Links', '🌐'), value: 'links' },
             { title: emojify('Open Source', '📘'), value: 'oss' },
             { title: emojify('Projects', '💎'), value: 'projects' }
-        ]
+        ],
+        hint: mainHint
     }    
     const { selected } = await prompt(menu, { onCancel });
 
@@ -52,6 +53,7 @@ async function main() {
         case 'about':
             console.clear();
             console.log();
+
 
             const sections: { title: string, content: string | string[] }[] = [];
 
@@ -62,6 +64,10 @@ async function main() {
             sections.push({
                 title: 'Career',
                 content: [...about.companies].map((c, i) => companyToLine(c, i === 0))
+            });
+            sections.push({
+                title: 'hr',
+                content: ''
             });
             sections.push({
                 title: 'Development Skills',
@@ -76,16 +82,24 @@ async function main() {
                 content: about.skills.personal.map((item) => `- ${item}`).join('\n  ')
             });
 
-            sections.forEach(({ title, content }, i) => {
-                console.log(h(title));
+            signature();
 
-                if (Array.isArray(content)) {
-                    content.forEach(c => console.log('  ' + c));
+            sections.forEach(({ title, content }, i) => {
+                if (title === 'hr') {
+                    hr();
                 } else {
-                    console.log('  ' + content);
+                    console.log(h(title));
+    
+                    if (Array.isArray(content)) {
+                        content.forEach(c => console.log('  ' + c));
+                    } else {
+                        console.log('  ' + content);
+                    }
+                    if (i !== sections.length - 1) { console.log(); }
                 }
-                if (i !== sections.length - 1) { console.log(); }
             });
+
+            console.log('\n');
 
             break;
         case 'links':
@@ -93,7 +107,8 @@ async function main() {
                 type: 'select',
                 name: 'url',
                 message: 'Links',
-                choices: linksToChoices(about.links)
+                choices: linksToChoices(about.links),
+                hint: linkHint
             }
             result = await prompt(links, { onCancel });
             break;
@@ -102,7 +117,8 @@ async function main() {
                 type: 'select',
                 name: 'url',
                 message: 'Open Source',
-                choices: linksToChoices(about.oss)
+                choices: linksToChoices(about.oss),
+                hint: linkHint
             }
             result = await prompt(oss, { onCancel });
             break;
@@ -111,7 +127,8 @@ async function main() {
                 type: 'select',
                 name: 'url',
                 message: 'Projects',
-                choices: linksToChoices(about.projects)
+                choices: linksToChoices(about.projects),
+                hint: linkHint
             }
             result = await prompt(projects, { onCancel });
             break;
@@ -130,11 +147,16 @@ async function main() {
 };
 
 async function run() {
-    const skipBack = await main();
-    if (skipBack) {
-        run();
-    } else {
-        await back();
+    try {
+        const skipBack = await main();
+        if (skipBack) {
+            run();
+        } else {
+            await back();
+        }
+    } catch (err) {
+        console.log(red('Please ensure you are using a recent LTS version of Node\n'));
+        console.error(err);
     }
 }
 

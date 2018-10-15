@@ -1,10 +1,4 @@
-import { resolve } from 'path';
-import { cwd } from 'process';
-import { promisify } from 'util';
-import { readFile as _readFile } from 'fs';
 import about from './me.json';
-const readFile = promisify(_readFile);
-
 import { About } from './models';
 
 export function readAbout(): Promise<About> {
@@ -17,3 +11,6 @@ export function isWin() {
 export function onlyUnix(str: string) {
     return !isWin() ? str : '';
 }
+
+export const mainHint = 'Use arrow keys. Return to view page.';
+export const linkHint = 'Use arrow keys. Return to open link.';

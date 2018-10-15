@@ -7,21 +7,21 @@
         {
             "company": "Intraprise Solutions",
             "role": "UI/UX Engineer",
-            "time": "1/2017 - Present",
+            "time": "Jan 2017 - Present",
             "description": "Lead UI designer and contributing engineer on two hybrid, patient-facing healthcare applications;\noversaw adoption of Angular & Ionic.\n\nCreated brand and design system for client business; lead designer and engineer of company website\nwith Stencil-built web components on a Wordpress backend."
         },
         {
             "company": "Freelance",
             "role": "Design/Development Consultant",
-            "time": "5/2015 - 1/2017",
+            "time": "May 2015 - Jan 2017",
             "description": "Worked with numerous small businesses; provided consultation and/or implementation of branding,\nweb development, illustration, and print design."
         }
     ],
     "education": [
-        { "name": "Knox College", "time": "8/2012 - 6/2016" }
+        { "name": "Knox College", "time": "Aug 2012 - Jun 2016" }
     ],
     "skills": {
-        "design": {
+        "development": {
             "Web Sites and Apps": [
                 "JS",
                 "Typescript",
@@ -39,7 +39,7 @@
                 "Git, Bash, PHP"
             ]
         },
-        "development": {
+        "design": {
             "UI/UX Design": [
                 "Design Systems",
                 "Animation",
