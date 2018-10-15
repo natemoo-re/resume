@@ -104,10 +104,6 @@
         "Emojex": {
             "text": "Emoji-based Regular Expressions (I'm sorry)",
             "url": "https://github.com/natemoo-re/emojex"
-        },
-        "S'more": {
-            "text": "Web Component library with microinteractions and UX utilities",
-            "url": "https://smore.tools/"
         }
     }
 }
